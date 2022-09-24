@@ -1,6 +1,6 @@
 ﻿
 # Lazarus compiler-generated binaries (safe to delete)
-project1
+subresync
 *.exe
 *.dll
 *.so
