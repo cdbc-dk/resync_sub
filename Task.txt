@@ -1,0 +1,69 @@
+09.01.2008 bc
+
+	Resync Subtitles - SubRip format (*.srt)
+
+
+	Slide all subs starting point along by a given interval, 
+	calculate the other values. 
+	Version 1: In the beginning, only support for srt files.
+	Later versions will cater for other formats.
+
+
+
+{
+1)	Read subtitle file *.srt
+
+2)	Parse file into unique objects with timestamp. (*)
+
+3)	Push or pull all individual subs along by a given factor. (ex.: 752 ms.)
+
+4)	Keep track of the individual durations and calculate sub-ends accordingly.
+
+5)	Rename Old file to *.bak.
+
+6)	Write the new resync'ed subs to *.srt file.
+
+}
+
+
+
+
+
+(*)	1)	Load subtitle file into a stringlist.
+	2)	If the last line in file is not an empty line, add one.
+	3)	Scan through the entire file.
+	4)	If we hit an empty line, we are in state => smNew,
+		smNEw:	If we have a valid object, add it to the list of entries. Create a new entry.
+		        Move to state => smId.
+		smId:	We read the integer on that line into object.Id field. Move to state => smTime.
+		smTime:	We read the two time entries into object.Start and object.Done fields. Calculate object.Duration.
+			Move to state => smText.
+		smText:	We read the line we're at into the object.Text.Add(Line). 
+			Stay in smText state.
+
+
+10.02.2008 bc
+TODO:
+
+done	1)	add support for subsection resync'in, between two id's.
+	2)	Add support for merging two subtitle-files into one, refitting id's and time-sync.
+	3)	Add support for *.sub files (frame counted) and eventually conversion between the two formats.
+
+11.02.2008 bc
+
+done    When merging two files:
+        1) set 'merging' property to true.
+        2) load and parse the first file.
+        3) save the last 'Id' and 'Starttime'.
+        4) load and parse the second file into the same list.
+        5) resync the second half, with factor=saved starttime, entrypoint=saved id and
+           exitpoint=list.count-1.
+        6) save the two files to 'filename.new'
+
+
+15.10.2009 bc
+
+done	When clearing internal list, use FreeAndNil to tear down objects. 'ClearEntries'.
+
+
+copyright (c) 2008-2009 cdbc.dk / Benny Christensen
