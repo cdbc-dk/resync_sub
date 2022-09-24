@@ -1,0 +1,142 @@
+object frmSubItemEdit: TfrmSubItemEdit
+  Left = 513
+  Height = 187
+  Top = 254
+  Width = 400
+  ActiveControl = edtStart
+  BorderStyle = bsDialog
+  Caption = 'Edit subtitle item'
+  ClientHeight = 187
+  ClientWidth = 400
+  Position = poScreenCenter
+  LCLVersion = '2.2.2.0'
+  object gbxStart: TGroupBox
+    Left = 5
+    Height = 50
+    Top = 5
+    Width = 192
+    Caption = ' Start time '
+    ClientHeight = 32
+    ClientWidth = 190
+    TabOrder = 0
+    object edtStart: TEdit
+      Left = 0
+      Height = 32
+      Top = 0
+      Width = 190
+      Align = alClient
+      TabOrder = 0
+    end
+  end
+  object gbxDone: TGroupBox
+    Left = 203
+    Height = 50
+    Top = 5
+    Width = 192
+    Caption = ' Done time '
+    ClientHeight = 32
+    ClientWidth = 190
+    TabOrder = 1
+    object edtDone: TEdit
+      Left = 0
+      Height = 32
+      Top = 0
+      Width = 190
+      Align = alClient
+      ParentBidiMode = False
+      TabOrder = 0
+    end
+  end
+  object stbInfo: TStatusBar
+    Left = 0
+    Height = 19
+    Top = 168
+    Width = 400
+    Panels = <    
+      item
+        Text = ' [Esc] = Cancel'
+        Width = 100
+      end    
+      item
+        Text = ' [Enter] = Commit changes'
+        Width = 150
+      end>
+    SimplePanel = False
+  end
+  object gbxText: TGroupBox
+    Left = 5
+    Height = 50
+    Top = 67
+    Width = 390
+    Caption = ' Text '
+    ClientHeight = 32
+    ClientWidth = 388
+    TabOrder = 3
+    object edtText: TEdit
+      Left = 0
+      Height = 32
+      Top = 0
+      Width = 388
+      Align = alClient
+      TabOrder = 0
+    end
+  end
+  object btnOk: TBitBtn
+    Left = 310
+    Height = 30
+    Top = 128
+    Width = 85
+    Default = True
+    DefaultCaption = True
+    Kind = bkOK
+    ModalResult = 1
+    OnClick = btnOkClick
+    TabOrder = 4
+  end
+  object btnCancel: TBitBtn
+    Left = 5
+    Height = 30
+    Top = 128
+    Width = 85
+    Cancel = True
+    DefaultCaption = True
+    Kind = bkCancel
+    ModalResult = 2
+    OnClick = btnCancelClick
+    TabOrder = 5
+  end
+  object imgButtons: TImageList
+    Left = 148
+    Top = 112
+    Bitmap = {
+      4C7A020000001000000010000000600300000000000078DAD593EB4B53611CC7
+      7DD75C8151619144D1DDCAD46DE69C334DAB395DD63675A6B3A9F3922BE94DA9
+      53D3B42C2ABAAC97516A77822E62372A82DE084E4DA9BF2122DA1931659ECD9D
+      F37C7BCEA9B5A5651722E8C5970387DFE7F9FDBEDFDFF30088C05F544404182A
+      84C4878BF909EB5ABD1E30D702257B81E21A82A22A82422B417E39C1F2351C2D
+      0A8CCDC496DA802C0DA05010C8640409093CE2E27828D51C76967258BA6A9216
+      B3AE1FB14525C0E828603010C4C7F3D8B081476E2E87E161826C5D005A53004B
+      56F829E47585F1E2BC591A22B2E3E380DB0DE8741C72723830D4F5189D7A7090
+      605DFC2432F5C20CB4288C17BCCAE504BB76F1221B3C4390C0320CC1E6CD9358
+      B8D087F43CA1BF278CE761AA0C7915E60D729F59202DCD8FE8681FE6CF67A1CE
+      F54DE30B2A88E83536964376F6549E40A5F263DE3C1651511350664FE70D161E
+      6BD772D068427E85AFC07A68E9870F84EE84C5ECD95E246D13F88F617C80EE86
+      872C3980A12122B22E17416AAA1F29293E91F57808FAFB792C5A320179163B85
+      F733C25E738A02C8D404E074F2222B789D3B97D6CB59914D4862A1D8CA6241CC
+      1885DCEFBFBD032C23EC75AB71122B63435EE7CCF12232D28BE818AFD877418C
+      671A1B3AC3CB2C5EE6855AE7874AEB8352E313BD2A2827CB9C990D9DE161846C
+      43FAF8456E416EFCE5F7FABF29EFAAC99173D9D0F627EC8E2B850EEB833A58EE
+      D7628B436BFF1D56D753E0A8E8DB8F8ED7E7D034D009D3CD32288FA537FF0A9B
+      DB9DEF28EBB5A17DF40CDA464FA3E85639523A33A0685549823596E7B62CF393
+      9AAA696C97D121CCDB36720AAD2327C5BEC91D699CFC704A887D66539B1F57BF
+      AB7B6947C11DCB81E07F9A9363CFBDBD38FCEA245A5E9D40E10D0B36B5AB3959
+      8BF22BBBE769EDF69247D56FEDCEE338327206FA9BC51CCDE980F692FEB4F96E
+      0D5A868FC33ED489FCEBA5483A92CA2536274BC2E72B7E5815B9BBD78A7D2FEA
+      71ECCD7934393B51D66783F5611D1A9D47D138D401E33533146D2A3EB16993E4
+      7BF9186F9BA5B42FAC8FEA448FCDC327503FD88E7A673B0C578B859C48823D49
+      3263C65D46A9F6A21E25772AD130D8818303ADD0F7EC06CD89C437CECC069579
+      412BCD38AB413E9D7767B7093427B2B14121F99D7B42F72A4D3E9A069A536063
+      BD7CD69FDC539A9334EE906CD6BF784F9F0017E861CD
+    }
+  end
+end
