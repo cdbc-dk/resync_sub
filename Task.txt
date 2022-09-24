@@ -1,4 +1,4 @@
-09.01.2008 bc
+﻿09.01.2008 bc
 
 	Resync Subtitles - SubRip format (*.srt)
 
@@ -66,4 +66,4 @@ done    When merging two files:
 done	When clearing internal list, use FreeAndNil to tear down objects. 'ClearEntries'.
 
 
-copyright (c) 2008-2009 cdbc.dk / Benny Christensen
+copyright (c) 2008-2022 cdbc.dk / Benny Christensen
